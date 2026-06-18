@@ -86,7 +86,7 @@ Rain_Generator/
 ├── physics_engine.py              # Marshall–Palmer + Gunn–Kinzer physics engine
 ├── spatial_middleware.py          # 3D→2D projection / Frustum culling / Z-buffer
 ├── renderer.py                    # Refraction, motion-blur, bloom, noise dual renderer
-├── main_parallel.py               # Full pipeline orchestrator (entrypoint)
+├── main.py               # Full pipeline orchestrator (entrypoint)
 │
 ├── sync_poses.py                  # COLMAP result → poses_colmap.csv extraction & interpolation
 ├── preprocess_depth.py            # disparity(.png) → depth(.npy) conversion
@@ -179,7 +179,7 @@ Output: `data/DSEC/<seq_name>/ground_truth/poses_colmap.csv`
 ### 4. Running the Main Pipeline (RGB + Event synthesis)
 
 ```bash
-python main_parallel.py \
+python main.py \
     --seq_name zurich_city_04_a \
     --start 0      \
     --end   7000      # 7 second window (in ms; omit for the full sequence)
