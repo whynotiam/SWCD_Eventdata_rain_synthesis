@@ -3,6 +3,7 @@
 # Physics-Based 3D Event-RGB Rain Synthesis for DSEC
 
 ---
+> **Note:** The entire workflow assumes a single DSEC sequence. Batch-applying this pipeline to all DSEC sequences requires code modifications.
 
 ## Overview
 
