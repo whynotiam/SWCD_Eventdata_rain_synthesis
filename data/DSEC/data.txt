@@ -1,0 +1,16 @@
+data/
+    ├── DSEC/<seq_name>/           # Input data
+    │   ├── images/left/rectified/*.png
+    │   ├── images/left/image_timestamps.txt
+    │   ├── events/left/events.h5
+    │   ├── ground_truth/disparity/*.png
+    │   ├── ground_truth/disparity_timestamps.txt
+    │   ├── ground_truth/poses_colmap.csv     # ← Output of sync_poses.py
+    │   ├── lidar/event_cam_coords/*.npy      # ← Output of preprocess_depth.py
+    │   └── calibration/cam_to_cam.yaml
+    │  # you can modifiy output directory
+    └── synthetic_output/<seq_name>/<seq_name>/   # Output data
+        ├── rgb_frames/frame_XXXXXX.png      # Motion-blurred RGB (50ms intervals)
+        ├── gt_masks/mask_XXXXXX.png         # Pure rain GT mask
+        ├── events_synthetic.h5              # RDE (Rain Drop Events)
+        └── final_input/InputEvent.h5        # Merged result (original + synthetic)
