@@ -207,9 +207,9 @@ Output: `data/synthetic_output/<seq_name>/<seq_name>/final_input/InputEvent.h5`
 
 All hyperparameters are managed in one place in [`config.py`](config.py). The camera matrix is loaded dynamically from `cam_to_cam.yaml`
 
-### 주요 파라미터
+### Main parameter
 
-| 카테고리 | 파라미터 | 기본값 | 설명 |
+| Category | Parameter | Default | Description |
 |---|---|---|---|
 | **Physics** | `rain_rate` | `10.0` mm/h | Rainfall rate (R) |
 | | `box_width / height / depth` | `50 / 30 / 30` m | Rain generation 3D Bounding Box |
@@ -222,7 +222,7 @@ All hyperparameters are managed in one place in [`config.py`](config.py). The ca
 
 ### Visual Effects Inside `renderer.py`
 
-| 효과 | 변수 | 기본값 |
+| Effect | Variable | Default |
 |---|---|---|
 | Rain opacity | `rain_opacity` | `0.5` |
 | Rain streak stretch (Y-axis) | `stretch_y` | `1000.0` |
@@ -266,7 +266,7 @@ We confirmed that the Restormer model successfully detects and removes the rain 
 
 ## Mathematical Background
 
-### Inverse Geometric Warping (1ms 보간)
+### Inverse Geometric Warping (1ms Interpolation)
 A 3D point is constructed from the target pixel `(x, y)` and depth `Z`, then reprojected to the source view via the relative transform `T_rel`:
 
 $$
@@ -293,10 +293,11 @@ $$
 
 ### Sphere Refraction Model (Garg & Nayar, 2006)
 The refraction displacement as a function of distance Δ from the raindrop center:
+
 $$
 \text{disp}_x = \tfrac{\Delta_x}{r} \left(1 - \tfrac{\sqrt{r^2 - \|\Delta\|^2}}{r}\right) \cdot S_{refr} \cdot \alpha
 $$
-
+where,
 $$
 \alpha = \text{clamp}\left(1 - \tfrac{\|\Delta\|}{r},\ 0\right)^{1.5}
 $$
