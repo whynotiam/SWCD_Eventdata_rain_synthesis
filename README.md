@@ -349,6 +349,7 @@ $$
 $$
 \text{disp}_x = \tfrac{\Delta_x}{r} \left(1 - \tfrac{\sqrt{r^2 - \|\Delta\|^2}}{r}\right) \cdot S_{refr} \cdot \alpha
 $$
+
 $$
 \alpha = \text{clamp}\left(1 - \tfrac{\|\Delta\|}{r},\ 0\right)^{1.5}
 $$
