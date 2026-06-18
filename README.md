@@ -42,7 +42,7 @@ The pipeline is organized into five sequential phases.
 
 **Phase 3** — **Dual-Stream Rendering**. The `RainRenderer` (`renderer.py`) splits the output into two streams that share the same physical computation. Stream A (RGB) composes the warped background with refraction, streaks, bloom, fog, and noise, then integrates 1ms frames over the 20ms exposure window to produce motion-blurred output saved as `rgb_frames/frame_XXXXXX.png`. Stream B (Event GT) executes the same rain computation on top of a static noise canvas and streams the result directly into the v2e EventEmulator, writing `events_synthetic.h5`.
 
-Phase 4 — Event Merging. Finally, `merge_events.py` merges the original DSEC `events.h5` with the synthetic rain events. Records are sorted by absolute timestamp, `ms_to_idx` is recomputed, and the result is exported as `InputEvent.h5` in the official DSEC format.
+**Phase 4** — **Event Merging**. Finally, `merge_events.py` merges the original DSEC `events.h5` with the synthetic rain events. Records are sorted by absolute timestamp, `ms_to_idx` is recomputed, and the result is exported as `InputEvent.h5` in the official DSEC format.
 
 ---
 
