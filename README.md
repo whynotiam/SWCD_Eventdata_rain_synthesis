@@ -152,7 +152,7 @@ python preprocess_depth.py --seq_name zurich_city_04_a
 ```
 output: `data/DSEC/<seq_name>/lidar/event_cam_coords/*.npy`
 
-### 3. COLMAP 기반 카메라 포즈 추출
+### 3. COLMAP-based Camera Pose Extraction
 
 DSEC provides IMU/GNSS but not precise camera poses, so **COLMAP** is used to perform sparse reconstruction.
 
