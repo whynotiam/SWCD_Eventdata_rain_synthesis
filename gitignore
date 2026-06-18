@@ -1,0 +1,43 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+.eggs/
+.pytest_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+
+# --- Virtual environments ---
+.venv/
+venv/
+env/
+ENV/
+
+# --- IDE / Editor ---
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# --- Project-specific data (large / per-user) ---
+data/
+colmap_workspace/
+third_party/
+
+# --- Generated artifacts ---
+*.h5
+*.npy
+*.png
+*.jpg
+*.jpeg
+*.log
+*.csv
+!requirements.txt
+
+# --- SLURM / cluster logs ---
+slurm-*.out
+*.err
