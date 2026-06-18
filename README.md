@@ -77,7 +77,7 @@ pip install PyYAML
 
 ---
 
-## 📂 Repository Structure
+## Repository Structure
 
 ```
 Rain_Generator/
@@ -121,7 +121,7 @@ Rain_Generator/
 
 ---
 
-## 🚀 Usage
+## Usage
 
 ### 0. Environment Variable Setup (recommended)
 All scripts recognize `WORKSPACE_DIR`.
@@ -203,7 +203,7 @@ Output: `data/synthetic_output/<seq_name>/<seq_name>/final_input/InputEvent.h5`
 
 ---
 
-## ⚙️ Configuration
+## Configuration
 
 All hyperparameters are managed in one place in [`config.py`](config.py). The camera matrix is loaded dynamically from `cam_to_cam.yaml`
 
@@ -235,7 +235,7 @@ All hyperparameters are managed in one place in [`config.py`](config.py). The ca
 
 ---
 
-## 📊 Results
+## Results
 
 Evaluation was performed on RGB–GT pairs of 7-second frames at 50ms intervals from DSEC daytime/nighttime sequences (GPU: RTX 3090 ×1).
 
